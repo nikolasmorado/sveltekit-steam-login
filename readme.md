@@ -1,5 +1,7 @@
+Module for make a login with steam credentials
+
 # How to use
-Import package
+Import module
 
 ```
 import loginSteam from 'simple-steam-login'
