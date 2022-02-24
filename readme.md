@@ -21,17 +21,17 @@ const opt = {
     returnUrl: STEAM_CALLBACK_URI, // Your return route
     apiKey: STEAM_API //Steam API key   
 }
-new loginSteam(opts)
+const login = new loginSteam(opts)
 ```
 
 In your route redirect to this url
 ```
-const url = this.loginSteam.get_URL_redirect()
+const url = login.get_URL_redirect()
 ```
 
 In your callback route (STEAM_CALLBACK_URI) get user info by passing query params object to authenticate() method
 ```
-const data = await this.loginSteam.authenticate(request.query);
+const data = await login.authenticate(request.query);
 ```
 
 data cointains all public user info
