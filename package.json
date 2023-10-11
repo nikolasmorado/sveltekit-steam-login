@@ -1,14 +1,14 @@
 {
-  "name": "simple-steam-login",
-  "version": "0.1.5",
-  "license": "MIT",
-  "main": "index.js",
-  "dependencies": {
-    "simple-get": "^4.0.0"
-  },
-  "type": "module",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/SimoneDevkt/simple-steam-login"
-  }
+	"name": "sveltekit-steam-login",
+	"version": "1.0.0",
+	"license": "MIT",
+	"main": "index.js",
+	"dependencies": {
+		"axios": "^1.5.1"
+	},
+	"type": "module",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/nikolasmorado/sveltekit-steam-openid"
+	}
 }
