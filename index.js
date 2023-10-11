@@ -107,4 +107,4 @@ class SteamLogin {
   }
 }
 
-export default LoginSteam;
+export default SteamLogin;
