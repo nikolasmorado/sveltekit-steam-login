@@ -1,8 +1,10 @@
 {
 	"name": "sveltekit-steam-login",
-	"version": "1.0.1",
+	"version": "1.0.2",
 	"license": "MIT",
 	"main": "index.js",
+	"author": "Nikolas Morado <nik@mora.do> (https://mora.do)",
+	"homepage": "https://github.com/nikolasmorado/sveltekit-steam-login",
 	"keywords": [
 		"sveltekit",
 		"steam",

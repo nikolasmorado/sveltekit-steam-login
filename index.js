@@ -48,13 +48,17 @@ class SteamLogin {
    * @returns {string} The URL for fetching user information.
    */
   getURLPublicInfo(query) {
-    const queryParams = new URLSearchParams({
-      steamids: query['openid.claimed_id'],
-      key: this.apiKey,
-      format: 'json',
-    });
-
-    return `http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?${queryParams.toString()}`;
+    if (query.url.searchParams.has('openid.claimed_id')) {
+      const steamId = query.url.searchParams.get('openid.claimed_id').split('/').pop();
+      const queryParams = new URLSearchParams({
+        steamids: steamId,
+        key: this.apiKey,
+        format: 'json',
+      });
+      return `http://api.steampowered.com/ISteamUser/GetPlayerSummaries/v0002/?${queryParams.toString()}`;
+    } else {
+      throw new Error('openid.claimed_id not found in query parameters');
+    }
   }
 
   /**
